@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветсвую а моем  APP</title>
+</head>
+<body>
+<H1>Добро пожаловать </H1>
+<div th:each="person : ${people}">
+    <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
+</div>
+<a href="/people/new">Create new person</a>
+</body>
+</html>
